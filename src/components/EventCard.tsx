@@ -41,8 +41,11 @@ export const EventCard: React.FC<EventCardProps> = ({ evento, onEdit, onDelete }
     }`}>
       {evento.imagem_url && (
         <div className="h-48 bg-gradient-to-r from-pink-100 to-pink-200 flex items-center justify-center">
-          <Image className="h-12 w-12 text-pink-400" />
-          <span className="ml-2 text-pink-600 text-sm">Imagem do evento</span>
+          <img
+            src={evento.imagem_url}
+            alt={evento.titulo || 'Imagem do Evento'} 
+            className="h-full w-full object-cover" 
+          />
         </div>
       )}
       
